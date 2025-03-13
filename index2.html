@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+        }
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: rgb(0, 0, 69);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+        }
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: rgb(0, 0, 69);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-btn {
+                display: block;
+            }
+        }
+        /* First Section */
+        .firstsection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .leftsection {
+            font-size: 2rem;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .rightsection img {
+            width: 80%;
+            max-width: 300px;
+        }
+        .purple {
+            color: rgb(207, 22, 207);
+            font-weight: 700;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background: #2222b8;
+            border: 2px solid #e0c1c1;
+            cursor: pointer;
+        }
+        /* Skills Section - Two Horizontal Rows */
+        .section {
+            text-align: center;
+            padding: 30px 20px;
+            max-width: 100%;
+        }
+        .box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 40px;
+            padding: 20px;
+            justify-items: center;
+        }
+        .vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .vertical img {
+            width: 80px;
+            transition: transform 0.3s;
+        }
+        .vertical:hover img {
+            transform: scale(1.1);
+        }
+        /* Footer */
+        footer {
+            background: #050e58;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .box {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .box {
+                grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+            }
+            .leftsection {
+                font-size: 1.5rem;
+            }
+            .rightsection img {
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Priyanshu's Portfolio</div>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- First Section -->
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, my name is <span class="purple">Priyanshu</span> and I am a passionate
+                <div><span id="element"></span></div>
+                <button class="button">Download Portfolio</button>
+                <button class="button">GitHub Profile</button>
+            </div>
+            <div class="rightsection">
+                <img src="icons/127-1272138_best-web-app-development-company-in-uk-india (1).png" alt="Profile Image">
+            </div>
+        </section>
+        <hr>
+        <!-- Skills Section (Two Rows, Horizontal Layout) -->
+        <section class="section">
+            <span class="text-gray">SKILL SECTION</span>
+            <h1>Skills I have !!!</h1>
+            <div class="box">
+                <div class="vertical"><img src="icons/pngwing.com.png" alt=""><div>HTML</div></div>
+                <div class="vertical"><img src="icons/pngwing.com (1).png" alt=""><div>CSS</div></div>
+                <div class="vertical"><img src="icons/pngwing.com (2).png" alt=""><div>JavaScript</div></div>
+                <div class="vertical"><img src="icons/pngwing.com (3).png" alt=""><div>React</div></div>
+                <div class="vertical"><img src="icons/pngwing.com (4).png" alt=""><div>C Language</div></div>
+                <div class="vertical"><img src="icons/pngwing.com (5).png" alt=""><div>C++</div></div>
+                <div class="vertical"><img src="icons/pngwing.com (6).png" alt=""><div>Python</div></div>
+                <div class="vertical"><img src="icons/pngwing.com (7).png" alt=""><div>PHP</div></div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/">About</a>
+            <a href="/">Projects</a>
+            <a href="https://github.com/PriyanshuV18">GitHub</a>
+            <a href="https://www.linkedin.com/in/priyanshu-verma-a1013523b">LinkedIn</a>
+        </div>
+        <div>Copyright &copy; Priyanshu's Portfolio | All rights reserved</div>
+    </footer>
+    <!-- JavaScript for Navbar & Typed.js -->
+    <!-- JavaScript for Navbar & Typed.js -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+        strings: ['Web Developer', 'Graphic Designer', 'UI/UX Designer', "Freelancer"],
+        typeSpeed: 50,
+    });
+
+    function toggleMenu() {
+        var navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
